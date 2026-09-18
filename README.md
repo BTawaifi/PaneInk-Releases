@@ -17,40 +17,44 @@ PaneInk is a lightweight, pressure-sensitive drawing overlay built for quick exp
 ## Why PaneInk?
 
 - **Natural pen input** — smooth pressure-sensitive strokes without artificial circular ends.
-- **Stays out of your way** — `Ctrl+1` toggles the entire overlay between drawing and click-through modes.
-- **Useful drawing tools** — pen, eraser, rectangles, circles, colors, smoothing, and bitmap mode.
-- **Multi-monitor capture** — screenshots only the displays containing ink and copies captures to the clipboard.
-- **Portable Windows build** — no installer or separate .NET runtime required.
-- **Optional auto-start** — included script adds or removes PaneInk from Windows startup without administrator rights.
+- **Stays out of your way** — `Ctrl+Alt+1` is the only global hotkey PaneInk ever holds. Toggle the overlay off and every click goes straight back to the desktop; your ink comes back exactly as you left it when you toggle on again.
+- **A full toolset** — pen, highlighter, eraser, line, arrow, rectangle, circle, text labels, numbered step badges, and opaque redaction blocks, plus a bitmap drawing mode.
+- **Multi-monitor, DPI aware** — screenshots capture only the displays containing ink and copy straight to the clipboard; ink, pointer and captures stay aligned even across monitors with different scaling.
+- **Install your way** — a per-user installer (no administrator prompt) or a portable, self-contained ZIP. No separate .NET runtime to install either way.
+- **Optional auto-start** — the installer's checkbox, or the bundled script for the portable build, adds or removes PaneInk from Windows startup without administrator rights.
 
 ## Download and run
 
-1. Open the [latest release](../../releases/latest).
-2. Download `PaneInk-*-win-x64.zip`.
-3. Extract the ZIP to a permanent folder.
-4. Run `PaneInk.exe`.
-5. Press `Ctrl+1` when you are ready to draw.
+Grab the latest release from the [Releases page](../../releases/latest).
+
+- **Installer** — run `PaneInk-<version>-win-x64-setup.exe`. It installs per user into `%LOCALAPPDATA%\Programs\PaneInk`, adds a Start Menu entry, offers to start PaneInk at sign-in, and registers an uninstaller in **Apps & features**.
+- **Portable ZIP** — extract `PaneInk-<version>-win-x64.zip` to a permanent folder and run `PaneInk.exe`.
 
 > PaneInk is currently unsigned. Windows SmartScreen may ask you to confirm the first launch.
+
+Press `Ctrl+Alt+1` when you are ready to draw.
 
 ## Essential shortcuts
 
 | Shortcut | Action |
 | --- | --- |
-| `Ctrl+1` | Toggle PaneInk and all drawing operations |
-| `Ctrl+2` | Pen; press again to cycle colors forward |
-| `Ctrl+3` | Eraser |
-| `Ctrl+4` / `Ctrl+5` | Rectangle / circle |
+| `Ctrl+Alt+1` | Toggle PaneInk (the only global hotkey — everything else below only works while it's on) |
+| `P` | Pen; press again to cycle colors forward |
+| `E` | Eraser |
+| `R` / `C` | Rectangle / circle |
+| `K` | Redact — an opaque block over anything that must not appear in a screenshot |
+| `B` | Toggle bitmap drawing mode |
 | `Ctrl+Z` / `Ctrl+Y` | Undo / redo |
 | `Ctrl+S` | Capture each monitor containing ink |
 | `Ctrl+Shift+S` | Capture a selected region |
-| `Esc` | Clear all ink |
+| `Ctrl+Del` | Clear all ink |
+| `Esc` | Cancel the current action, or toggle the overlay off — this never deletes your ink |
 
-Use `Ctrl+Shift+2/4/5` to cycle colors backward and `Ctrl+Alt+2/4/5` to open the Windows color picker.
+`Shift+<key>` cycles a tool's color backward, and `Ctrl+P` opens the Windows color picker for the current tool. The floating toolbar (drag its grip to move it, or collapse it with the chevron) covers the rest — highlighter, line, arrow, text labels and numbered badges included.
 
 ## Start with Windows
 
-From the extracted release folder:
+The installer offers this with its **Start PaneInk when I sign in** checkbox. For the portable ZIP, run the bundled script from the extracted folder:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\set-autostart.ps1 -Add
