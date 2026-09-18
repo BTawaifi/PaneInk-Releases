@@ -14,6 +14,11 @@
 
 PaneInk is a lightweight, pressure-sensitive drawing overlay built for quick explanations, presentations, lessons, reviews, and visual thinking. Toggle it on, draw over any app, then toggle it off without losing your ink.
 
+<p align="center">
+  <a href="assets/PaneInk-demo.mp4"><img src="assets/PaneInk-demo.gif" alt="PaneInk demo: annotating a slide with pen, highlighter, arrow, text, badges and redaction" width="800"></a>
+  <br><sub>A 38-second walkthrough on an invented desktop. Click for the full-quality video.</sub>
+</p>
+
 ## Why PaneInk?
 
 - **Natural pen input** — smooth pressure-sensitive strokes without artificial circular ends.
