@@ -16,7 +16,7 @@ PaneInk is a lightweight, pressure-sensitive drawing overlay built for quick exp
 
 <p align="center">
   <a href="assets/PaneInk-demo.mp4"><img src="assets/PaneInk-demo.gif" alt="PaneInk demo: annotating a slide with pen, highlighter, arrow, text, badges and redaction" width="800"></a>
-  <br><sub>A 38-second walkthrough on an invented desktop. Click for the full-quality video.</sub>
+  <br><sub>A 42-second walkthrough on an invented desktop. Click for the full-quality video.</sub>
 </p>
 
 ## Why PaneInk?
